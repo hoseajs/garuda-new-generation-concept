@@ -25,14 +25,16 @@ const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
 
 let currentSlide = 0;
+const totalSlides = track.children.length;
 
 nextBtn.onclick = () => {
-  currentSlide = Math.min(currentSlide + 1, track.children.length - 1);
+  currentSlide = (currentSlide + 1) % totalSlides;
   track.style.transform = `translateX(-${currentSlide * 100}%)`;
 };
 
 prevBtn.onclick = () => {
-  currentSlide = Math.max(currentSlide - 1, 0);
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
   track.style.transform = `translateX(-${currentSlide * 100}%)`;
 };
+
 
