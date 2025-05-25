@@ -20,21 +20,23 @@ window.addEventListener('scroll', () => {
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // supaya gak negatif
 });
 
-const track = document.querySelector('.carousel-track');
-const nextBtn = document.querySelector('.next');
-const prevBtn = document.querySelector('.prev');
+const carousels = document.querySelectorAll('.carousel');
 
-let currentSlide = 0;
-const totalSlides = track.children.length;
+carousels.forEach(carousel => {
+  const track = carousel.querySelector('.carousel-track');
+  const nextBtn = carousel.querySelector('.next');
+  const prevBtn = carousel.querySelector('.prev');
 
-nextBtn.onclick = () => {
-  currentSlide = (currentSlide + 1) % totalSlides;
-  track.style.transform = `translateX(-${currentSlide * 100}%)`;
-};
+  let currentSlide = 0;
+  const totalSlides = track.children.length;
 
-prevBtn.onclick = () => {
-  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-  track.style.transform = `translateX(-${currentSlide * 100}%)`;
-};
+  nextBtn.onclick = () => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+  };
 
-
+  prevBtn.onclick = () => {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+  };
+});
