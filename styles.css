@@ -107,6 +107,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .space-line{
   margin-left: 1.3em;
+  color: black;
 }
 
 ::selection {
