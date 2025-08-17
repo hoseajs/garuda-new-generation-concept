@@ -105,6 +105,10 @@ body::-webkit-scrollbar-thumb:hover {
   line-height: 1.6;
 }
 
+.space-line{
+  margin-left: 1.3em;
+}
+
 ::selection {
   background-color: rgba(128, 128, 128, 0.3); /* abu-abu transparan */
   color: white;
