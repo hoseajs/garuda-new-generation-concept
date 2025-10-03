@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+  font-family: 'Apple Color Emoji';
+  src: local('Apple Color Emoji'), local('AppleColorEmoji'), local('apple-color-emoji');
+  src:
+    /*url('fonts/AppleColorEmoji.woff2') format('woff2'),*/
+    url('fonts/AppleColorEmoji.woff') format('woff'),
+    url('fonts/AppleColorEmoji.ttf') format('truetype'),
+    url('fonts/AppleColorEmoji.eot?'),
+    url('fonts/AppleColorEmoji.eot?#iefix') format('embedded-opentype'),
+    url('fonts/AppleColorEmoji.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: Apple Color Emoji, Montserrat, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -150,3 +164,4 @@ body::-webkit-scrollbar-thumb:hover {
 
 .prev { left: 10px; }
 .next { right: 10px; }
+
